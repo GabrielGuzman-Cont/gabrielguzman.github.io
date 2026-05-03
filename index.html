@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gabriel Guzmán — Contador Estratégico · El Salvador</title>
+
+<!-- SEO -->
+<meta name="description" content="Contador estratégico en El Salvador. Declaraciones IVA y Renta, nómina, dashboards financieros y asesoría 100% digital. Diagnóstico gratis en 30 minutos.">
+<meta name="keywords" content="contador El Salvador, contador online, contabilidad PYME, declaración IVA, renta El Salvador, asesoría financiera">
+<meta name="author" content="Gabriel Guzmán">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph (WhatsApp, Facebook, LinkedIn) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gabriel Guzmán — Contador Estratégico · El Salvador">
+<meta property="og:description" content="No solo llevo tu contabilidad — te ayudo a entender si tu negocio está ganando dinero de verdad. Diagnóstico gratis, 100% digital.">
+<meta property="og:image" content="https://placehold.co/1200x630/1a4a3a/ffffff?text=Gabriel+Guzmán+·+Contador+Estratégico">
+<meta property="og:locale" content="es_SV">
+
+<!-- Favicon SVG inline -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%231a4a3a'/><text y='68' x='50' text-anchor='middle' font-size='52' font-family='Georgia,serif' fill='%23c8a96e'>G</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #0f0e0c; --paper: #f5f2ec; --accent: #1a4a3a;
+    --accent-light: #2d7a5e; --gold: #c8a96e; --muted: #6b6860;
+    --border: rgba(15,14,12,0.12);
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'DM Sans', sans-serif;
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.7; overflow-x: hidden; }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 20px 48px; background: rgba(245,242,236,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+  .nav-logo { font-family: var(--serif); font-size: 18px; letter-spacing: -0.02em; color: var(--accent); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { font-size: 13px; font-weight: 400; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color .2s; }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-cta { font-size: 13px; font-weight: 500; background: var(--accent); color: #fff; padding: 10px 22px; border-radius: 2px; text-decoration: none; letter-spacing: 0.02em; transition: background .2s, transform .15s; }
+  .nav-cta:hover { background: var(--accent-light); transform: translateY(-1px); }
+  .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+  .nav-hamburger span { display: block; width: 22px; height: 1.5px; background: var(--ink); transition: all .25s; }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+  .mobile-menu { display: none; position: fixed; top: 61px; left: 0; right: 0; z-index: 99; background: rgba(245,242,236,0.97); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); padding: 24px 24px 28px; flex-direction: column; gap: 20px; }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { font-size: 15px; color: var(--ink); text-decoration: none; font-weight: 400; letter-spacing: 0.02em; padding: 4px 0; border-bottom: 1px solid var(--border); }
+  .mobile-menu .mobile-cta { background: var(--accent); color: #fff; padding: 14px; text-align: center; border-radius: 2px; border-bottom: none; font-weight: 500; margin-top: 4px; }
+
+  /* HERO */
+  .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; padding-top: 80px; }
+  .hero-left { padding: 80px 48px; display: flex; flex-direction: column; justify-content: center; border-right: 1px solid var(--border); }
+  .hero-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-light); margin-bottom: 28px; display: flex; align-items: center; gap: 10px; }
+  .hero-tag::before { content: ''; display: block; width: 28px; height: 1px; background: var(--accent-light); }
+  .hero-heading { font-family: var(--serif); font-size: clamp(44px, 5vw, 68px); line-height: 1.08; letter-spacing: -0.02em; margin-bottom: 28px; }
+  .hero-heading em { font-style: italic; color: var(--accent); }
+  .hero-sub { font-size: 16px; color: var(--muted); max-width: 440px; margin-bottom: 44px; line-height: 1.75; }
+  .hero-actions { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+  .btn-primary { background: var(--accent); color: #fff; padding: 16px 32px; border-radius: 2px; font-size: 14px; font-weight: 500; letter-spacing: 0.02em; text-decoration: none; transition: all .2s; border: none; cursor: pointer; display: inline-block; }
+  .btn-primary:hover { background: var(--accent-light); transform: translateY(-2px); }
+  .btn-ghost { color: var(--ink); font-size: 14px; font-weight: 400; text-decoration: none; letter-spacing: 0.01em; display: flex; align-items: center; gap: 8px; transition: gap .2s; }
+  .btn-ghost:hover { gap: 14px; }
+
+  .hero-right { padding: 60px 48px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 28px; background: var(--accent); color: #fff; position: relative; overflow: hidden; }
+  .hero-right::before { content: ''; position: absolute; top: -80px; right: -80px; width: 300px; height: 300px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.12); }
+  .hero-right::after { content: ''; position: absolute; bottom: -40px; left: -40px; width: 180px; height: 180px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.08); }
+
+  .hero-photo-wrap { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .hero-photo { width: 120px; height: 120px; border-radius: 50%; border: 3px solid var(--gold); background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 44px; color: var(--gold); overflow: hidden; }
+  .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .hero-photo-name { font-family: var(--serif); font-size: 20px; color: #fff; }
+  .hero-photo-title { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+
+  .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.15); border-radius: 4px; overflow: hidden; width: 100%; position: relative; z-index: 1; }
+  .stat { padding: 22px 20px; background: rgba(26,74,58,0.6); }
+  .stat-num { font-family: var(--serif); font-size: 36px; line-height: 1; color: var(--gold); margin-bottom: 6px; }
+  .stat-label { font-size: 11px; letter-spacing: 0.04em; color: rgba(255,255,255,0.65); text-transform: uppercase; }
+  .hero-quote { font-family: var(--serif); font-style: italic; font-size: 16px; line-height: 1.55; color: rgba(255,255,255,0.8); border-left: 2px solid var(--gold); padding-left: 16px; position: relative; z-index: 1; }
+
+  /* SECTION BASE */
+  section { padding: 96px 48px; }
+  .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-light); margin-bottom: 16px; }
+  .section-title { font-family: var(--serif); font-size: clamp(32px, 3.5vw, 48px); line-height: 1.12; letter-spacing: -0.02em; margin-bottom: 20px; }
+  .section-desc { font-size: 16px; color: var(--muted); max-width: 560px; line-height: 1.75; }
+
+  /* SOBRE MÍ */
+  .sobre-section { background: #fff; display: grid; grid-template-columns: 1fr 1fr; padding: 0; }
+  .sobre-left { padding: 80px 48px; border-right: 1px solid var(--border); display: flex; flex-direction: column; justify-content: center; }
+  .sobre-right { padding: 80px 48px; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+  .sobre-bio { font-size: 16px; color: var(--muted); line-height: 1.8; margin-bottom: 4px; }
+  .sobre-bio strong { color: var(--ink); font-weight: 500; }
+  .sobre-credenciales { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .credencial { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 12px; border: 1px solid var(--border); border-radius: 2px; color: var(--muted); }
+  .sobre-item { display: flex; gap: 16px; align-items: flex-start; }
+  .sobre-icon { width: 36px; height: 36px; flex-shrink: 0; background: rgba(26,74,58,0.07); border-radius: 2px; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+  .sobre-item-title { font-family: var(--serif); font-size: 17px; margin-bottom: 4px; }
+  .sobre-item-desc { font-size: 14px; color: var(--muted); line-height: 1.65; }
+
+  /* DIFERENCIADORES */
+  .dif-section { background: var(--ink); color: var(--paper); }
+  .dif-section .section-label { color: var(--gold); }
+  .dif-section .section-title { color: var(--paper); }
+  .dif-section .section-desc { color: rgba(245,242,236,0.6); }
+  .dif-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1px; margin-top: 56px; background: rgba(245,242,236,0.08); border: 1px solid rgba(245,242,236,0.08); }
+  .dif-card { padding: 36px 32px; background: var(--ink); transition: background .25s; }
+  .dif-card:hover { background: #1a1917; }
+  .dif-num { font-family: var(--serif); font-size: 13px; color: var(--gold); letter-spacing: 0.08em; margin-bottom: 20px; opacity: .8; }
+  .dif-title { font-family: var(--serif); font-size: 22px; margin-bottom: 12px; color: var(--paper); line-height: 1.2; }
+  .dif-desc { font-size: 14px; color: rgba(245,242,236,0.55); line-height: 1.7; }
+
+  /* SERVICIOS */
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 56px; border: 1px solid var(--border); }
+  .service-card { padding: 36px 32px; border-right: 1px solid var(--border); position: relative; transition: background .2s; }
+  .service-card:last-child { border-right: none; }
+  .service-card:hover { background: rgba(26,74,58,0.04); }
+  .service-tag { display: inline-block; font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 10px; border: 1px solid var(--border); border-radius: 1px; color: var(--muted); margin-bottom: 24px; }
+  .service-featured .service-tag { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .service-name { font-family: var(--serif); font-size: 26px; margin-bottom: 8px; line-height: 1.2; }
+  .service-price { font-size: 13px; color: var(--muted); margin-bottom: 24px; }
+  .service-price strong { font-weight: 500; color: var(--ink); font-size: 15px; }
+  .service-features { list-style: none; margin-bottom: 32px; }
+  .service-features li { font-size: 14px; color: var(--muted); padding: 8px 0; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; gap: 10px; }
+  .service-features li::before { content: '→'; color: var(--accent-light); font-size: 12px; margin-top: 2px; flex-shrink: 0; }
+  .service-featured { background: rgba(26,74,58,0.03); }
+  .service-featured .service-name { color: var(--accent); }
+
+  /* PROCESO */
+  .proceso-section { background: #f0ece3; }
+  .proceso-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 56px; position: relative; }
+  .proceso-steps::before { content: ''; position: absolute; top: 28px; left: 10%; right: 10%; height: 1px; background: var(--border); z-index: 0; }
+  .proceso-step { padding: 0 24px; text-align: center; position: relative; z-index: 1; }
+  .step-circle { width: 56px; height: 56px; border-radius: 50%; background: var(--paper); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-family: var(--serif); font-size: 18px; color: var(--accent); }
+  .step-title { font-family: var(--serif); font-size: 18px; margin-bottom: 10px; }
+  .step-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
+
+  /* TESTIMONIOS */
+  .testimonios-section { background: var(--accent); color: #fff; padding: 96px 48px; }
+  .testimonios-section .section-label { color: var(--gold); }
+  .testimonios-section .section-title { color: #fff; }
+  .testimonios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 56px; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.15); border-radius: 4px; overflow: hidden; }
+  .testimonio-card { padding: 32px 28px; background: rgba(26,74,58,0.5); display: flex; flex-direction: column; gap: 20px; }
+  .testimonio-stars { color: var(--gold); font-size: 14px; letter-spacing: 2px; }
+  .testimonio-text { font-family: var(--serif); font-style: italic; font-size: 16px; line-height: 1.6; color: rgba(255,255,255,0.9); flex: 1; }
+  .testimonio-autor { display: flex; flex-direction: column; gap: 2px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.15); }
+  .testimonio-nombre { font-size: 13px; font-weight: 500; color: #fff; }
+  .testimonio-cargo { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); }
+
+  /* FAQ */
+  .faq-section { background: var(--paper); }
+  .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 56px; border: 1px solid var(--border); }
+  .faq-item { padding: 28px 32px; border-bottom: 1px solid var(--border); border-right: 1px solid var(--border); cursor: pointer; transition: background .2s; }
+  .faq-item:nth-child(even) { border-right: none; }
+  .faq-item:nth-last-child(-n+2) { border-bottom: none; }
+  .faq-item:hover { background: rgba(26,74,58,0.03); }
+  .faq-q { font-family: var(--serif); font-size: 17px; margin-bottom: 10px; line-height: 1.3; display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+  .faq-toggle { color: var(--accent-light); font-size: 20px; line-height: 1; flex-shrink: 0; transition: transform .25s; font-style: normal; }
+  .faq-item.open .faq-toggle { transform: rotate(45deg); }
+  .faq-a { font-size: 14px; color: var(--muted); line-height: 1.7; max-height: 0; overflow: hidden; transition: max-height .35s ease, padding-top .2s; }
+  .faq-item.open .faq-a { max-height: 200px; padding-top: 4px; }
+
+  /* CTA */
+  .cta-section { display: grid; grid-template-columns: 1fr 1fr; min-height: 480px; }
+  .cta-left { padding: 80px 48px; display: flex; flex-direction: column; justify-content: center; border-right: 1px solid var(--border); }
+  .cta-right { padding: 64px 48px; display: flex; flex-direction: column; justify-content: center; }
+  .cta-title { font-family: var(--serif); font-size: clamp(32px, 3vw, 46px); line-height: 1.1; margin-bottom: 20px; }
+  .cta-desc { font-size: 15px; color: var(--muted); margin-bottom: 36px; line-height: 1.75; }
+
+  /* FORM */
+  .form-group { margin-bottom: 16px; }
+  .form-label { display: block; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+  .form-input, .form-select, .form-textarea { width: 100%; padding: 14px 16px; border: 1px solid var(--border); border-radius: 2px; background: #fff; font-family: var(--sans); font-size: 14px; font-weight: 300; color: var(--ink); transition: border-color .2s, box-shadow .2s; outline: none; }
+  .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--accent-light); box-shadow: 0 0 0 3px rgba(26,74,58,0.08); }
+  .form-textarea { resize: vertical; min-height: 90px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .form-submit { width: 100%; background: var(--accent); color: #fff; border: none; border-radius: 2px; padding: 16px; font-size: 14px; font-weight: 500; font-family: var(--sans); letter-spacing: 0.03em; cursor: pointer; margin-top: 8px; transition: all .2s; }
+  .form-submit:hover { background: var(--accent-light); transform: translateY(-1px); }
+  .form-note { font-size: 12px; color: var(--muted); margin-top: 12px; text-align: center; }
+
+  /* FOOTER */
+  footer { padding: 32px 48px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--muted); }
+  footer a { color: var(--accent-light); text-decoration: none; }
+
+  /* ANIMATIONS */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .65s ease, transform .65s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* WHATSAPP FLOTANTE */
+  .wa-float { position: fixed; bottom: 28px; right: 28px; z-index: 200; width: 56px; height: 56px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); transition: transform .2s, box-shadow .2s; text-decoration: none; }
+  .wa-float:hover { transform: scale(1.1) translateY(-2px); box-shadow: 0 8px 28px rgba(37,211,102,0.5); }
+  .wa-float svg { width: 28px; height: 28px; }
+  .wa-tooltip { position: absolute; right: 64px; top: 50%; transform: translateY(-50%); background: var(--ink); color: #fff; font-size: 12px; white-space: nowrap; padding: 6px 12px; border-radius: 2px; pointer-events: none; opacity: 0; transition: opacity .2s; font-family: var(--sans); }
+  .wa-float:hover .wa-tooltip { opacity: 1; }
+  .wa-tooltip::after { content: ''; position: absolute; left: 100%; top: 50%; transform: translateY(-50%); border: 5px solid transparent; border-left-color: var(--ink); }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 16px 24px; }
+    .nav-links, .nav-cta { display: none; }
+    .nav-hamburger { display: flex; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-left { border-right: none; border-bottom: 1px solid var(--border); padding: 60px 24px 48px; }
+    .hero-right { padding: 48px 24px; }
+    section { padding: 64px 24px; }
+    .sobre-section { grid-template-columns: 1fr; }
+    .sobre-left { border-right: none; border-bottom: 1px solid var(--border); padding: 64px 24px; }
+    .sobre-right { padding: 48px 24px; }
+    .services-grid { grid-template-columns: 1fr; }
+    .service-card { border-right: none; border-bottom: 1px solid var(--border); }
+    .proceso-steps { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .proceso-steps::before { display: none; }
+    .testimonios-grid { grid-template-columns: 1fr; }
+    .faq-grid { grid-template-columns: 1fr; }
+    .faq-item { border-right: none; }
+    .faq-item:nth-last-child(-n+2) { border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .cta-section { grid-template-columns: 1fr; }
+    .cta-left { border-right: none; border-bottom: 1px solid var(--border); }
+    .form-row { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 12px; text-align: center; }
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+    .dif-grid { grid-template-columns: 1fr; }
+    .wa-float { bottom: 20px; right: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- WHATSAPP FLOTANTE -->
+<a class="wa-float" href="https://wa.me/50360439421?text=Hola%20Gabriel%2C%20me%20interesa%20el%20diagn%C3%B3stico%20gratuito." target="_blank" aria-label="WhatsApp">
+  <span class="wa-tooltip">¡Escríbeme ahora!</span>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Gabriel · Contador</div>
+  <ul class="nav-links">
+    <li><a href="#sobre-mi">Sobre mí</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#proceso">Proceso</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <a href="#contacto" class="nav-cta">Diagnóstico gratis</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#sobre-mi" onclick="closeMobileMenu()">Sobre mí</a>
+  <a href="#servicios" onclick="closeMobileMenu()">Servicios</a>
+  <a href="#proceso" onclick="closeMobileMenu()">Proceso</a>
+  <a href="#faq" onclick="closeMobileMenu()">Preguntas frecuentes</a>
+  <a href="#contacto" class="mobile-cta" onclick="closeMobileMenu()">Diagnóstico gratis →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" style="padding:0;">
+  <div class="hero-left reveal">
+    <div class="hero-tag">Contador estratégico · El Salvador</div>
+    <h1 class="hero-heading">Tus números,<br><em>convertidos</em><br>en decisiones.</h1>
+    <p class="hero-sub">No solo llevo tu contabilidad — te ayudo a entender si tu negocio está ganando dinero de verdad, y a tomar decisiones con datos claros.</p>
+    <div class="hero-actions">
+      <a href="#contacto" class="btn-primary">Agendar diagnóstico gratis</a>
+      <a href="#servicios" class="btn-ghost">Ver servicios →</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <!-- FOTO: reemplaza el div.hero-photo con <img class="hero-photo" src="tu-foto.jpg" alt="Gabriel Guzmán"> -->
+    <div class="hero-photo-wrap reveal" style="transition-delay:.1s">
+      <div class="hero-photo">G</div>
+      <div class="hero-photo-name">Gabriel Guzmán</div>
+      <div class="hero-photo-title">Contador Público · El Salvador</div>
+    </div>
+    <div class="stats-grid reveal" style="transition-delay:.2s">
+      <div class="stat"><div class="stat-num" data-target="20" data-suffix="+">0</div><div class="stat-label">Clientes activos</div></div>
+      <div class="stat"><div class="stat-num" data-target="3" data-suffix="+">0</div><div class="stat-label">Años de experiencia</div></div>
+      <div class="stat"><div class="stat-num" data-target="100" data-suffix="%">0</div><div class="stat-label">Digital y remoto</div></div>
+      <div class="stat"><div class="stat-num" data-target="48" data-suffix="h">0</div><div class="stat-label">Respuesta máxima</div></div>
+    </div>
+    <p class="hero-quote reveal" style="transition-delay:.35s">"El contador del siglo XXI no solo declara impuestos — construye el mapa financiero de tu negocio."</p>
+  </div>
+</section>
+
+<!-- SOBRE MÍ -->
+<section class="sobre-section" id="sobre-mi" style="padding:0;">
+  <div class="sobre-left reveal">
+    <div class="section-label">Sobre mí</div>
+    <h2 class="section-title">Contabilidad con visión de negocio</h2>
+    <p class="sobre-bio">Soy <strong>Gabriel Guzmán</strong>, contador estratégico con experiencia en contabilidad, nómina y cumplimiento tributario para PYMEs en El Salvador. Combino formación académica con herramientas modernas de automatización para darte reportes claros y asesoría real — no solo declaraciones.</p>
+    <p class="sobre-bio">Trabajo 100% de forma digital. Sin papeles, sin desplazamientos, con respuesta garantizada en menos de 48 horas.</p>
+    <div class="sobre-credenciales">
+      <span class="credencial">IVA · Renta</span>
+      <span class="credencial">ISSS · AFP · INCAF</span>
+      <span class="credencial">Nómina</span>
+      <span class="credencial">F-14 Hacienda</span>
+      <span class="credencial">Dashboards</span>
+    </div>
+  </div>
+  <div class="sobre-right reveal" style="transition-delay:.15s">
+    <div class="sobre-item">
+      <div class="sobre-icon">📊</div>
+      <div><div class="sobre-item-title">Reportes que entiendes</div><div class="sobre-item-desc">Sin hojas de Excel incomprensibles. Dashboards visuales que te dicen cómo está tu negocio en 30 segundos.</div></div>
+    </div>
+    <div class="sobre-item">
+      <div class="sobre-icon">⚡</div>
+      <div><div class="sobre-item-title">Automatización contable</div><div class="sobre-item-desc">Uso Python y software moderno para eliminar errores manuales y acelerar nómina, F-14 y declaraciones.</div></div>
+    </div>
+    <div class="sobre-item">
+      <div class="sobre-icon">🏛️</div>
+      <div><div class="sobre-item-title">Cumplimiento al día</div><div class="sobre-item-desc">Conozco a fondo la normativa de Hacienda, ISSS, AFP e INCAF. Tu empresa siempre en regla.</div></div>
+    </div>
+    <div class="sobre-item">
+      <div class="sobre-icon">🤝</div>
+      <div><div class="sobre-item-title">Trato directo</div><div class="sobre-item-desc">Hablas conmigo, no con un asistente. Conozco tu negocio desde el primer día.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIADORES -->
+<section class="dif-section">
+  <div class="section-label">Por qué elegirme</div>
+  <h2 class="section-title">Lo que me hace diferente</h2>
+  <p class="section-desc">Combino tecnología, análisis y asesoría estratégica para que tus finanzas trabajen para ti, no al revés.</p>
+  <div class="dif-grid">
+    <div class="dif-card reveal"><div class="dif-num">01</div><div class="dif-title">Dashboards visuales</div><div class="dif-desc">Reportes que entiendes en 30 segundos. Sin hojas de Excel incomprensibles.</div></div>
+    <div class="dif-card reveal" style="transition-delay:.1s"><div class="dif-num">02</div><div class="dif-title">Automatización contable</div><div class="dif-desc">Uso software moderno para eliminar errores y procesos manuales.</div></div>
+    <div class="dif-card reveal" style="transition-delay:.2s"><div class="dif-num">03</div><div class="dif-title">Servicio 100% digital</div><div class="dif-desc">Sin papeles, sin desplazamientos. Todo desde tu computadora o teléfono.</div></div>
+    <div class="dif-card reveal" style="transition-delay:.3s"><div class="dif-num">04</div><div class="dif-title">Asesoría estratégica</div><div class="dif-desc">Voy más allá de los impuestos: te ayudo a crecer con base en tus números.</div></div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+  <div class="section-label">Planes de servicio</div>
+  <h2 class="section-title">Elige tu plan</h2>
+  <p class="section-desc">Servicios pensados para cada etapa de tu negocio. Sin letra chica.</p>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <span class="service-tag">Starter</span>
+      <div class="service-name">Para empezar</div>
+      <div class="service-price">Desde <strong>Consultar precio</strong></div>
+      <ul class="service-features">
+        <li>Declaración mensual de IVA y renta</li>
+        <li>Registro contable básico</li>
+        <li>1 reporte financiero mensual</li>
+        <li>Atención por WhatsApp</li>
+      </ul>
+      <a href="#contacto" class="btn-ghost">Consultar →</a>
+    </div>
+    <div class="service-card service-featured reveal" style="transition-delay:.1s">
+      <span class="service-tag">Pro · Más popular</span>
+      <div class="service-name">Para crecer</div>
+      <div class="service-price">Desde <strong>Consultar precio</strong></div>
+      <ul class="service-features">
+        <li>Todo lo del plan Starter</li>
+        <li>Dashboard financiero visual mensual</li>
+        <li>Gestión de nómina</li>
+        <li>Asesoría estratégica 1 hora/mes</li>
+        <li>Atención prioritaria</li>
+      </ul>
+      <a href="#contacto" class="btn-primary">Consultar →</a>
+    </div>
+    <div class="service-card reveal" style="transition-delay:.2s">
+      <span class="service-tag">Estratégico</span>
+      <div class="service-name">Para escalar</div>
+      <div class="service-price">Desde <strong>Consultar precio</strong></div>
+      <ul class="service-features">
+        <li>Todo lo del plan Pro</li>
+        <li>Proyecciones y flujo de caja</li>
+        <li>Asesoría ilimitada</li>
+        <li>Preparación para créditos</li>
+        <li>Reportes para socios/inversionistas</li>
+      </ul>
+      <a href="#contacto" class="btn-ghost">Consultar →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section class="proceso-section" id="proceso">
+  <div class="section-label">Cómo funciona</div>
+  <h2 class="section-title">Simple desde el primer día</h2>
+  <p class="section-desc">Sin burocracia ni reuniones innecesarias. Empezamos en menos de 48 horas.</p>
+  <div class="proceso-steps">
+    <div class="proceso-step reveal"><div class="step-circle">1</div><div class="step-title">Diagnóstico gratis</div><div class="step-desc">Revisamos juntos la situación actual de tu negocio en 30 minutos.</div></div>
+    <div class="proceso-step reveal" style="transition-delay:.1s"><div class="step-circle">2</div><div class="step-title">Plan a tu medida</div><div class="step-desc">Te propongo el servicio que se ajusta a tu etapa y presupuesto.</div></div>
+    <div class="proceso-step reveal" style="transition-delay:.2s"><div class="step-circle">3</div><div class="step-title">Onboarding digital</div><div class="step-desc">Te integro a las herramientas en menos de 48 horas. Sin papeles.</div></div>
+    <div class="proceso-step reveal" style="transition-delay:.3s"><div class="step-circle">4</div><div class="step-title">Seguimiento continuo</div><div class="step-desc">Reportes, alertas y asesoría cuando lo necesites. Siempre disponible.</div></div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="testimonios-section">
+  <div class="section-label">Testimonios</div>
+  <h2 class="section-title">Lo que dicen mis clientes</h2>
+  <div class="testimonios-grid">
+    <div class="testimonio-card reveal">
+      <div class="testimonio-stars">★★★★★</div>
+      <p class="testimonio-text">"Pensaba que mi negocio era rentable. Gabriel revisó mis números y encontró que estaba perdiendo $400 al mes sin saberlo. En tres meses lo revertimos."</p>
+      <div class="testimonio-autor"><span class="testimonio-nombre">Carlos M.</span><span class="testimonio-cargo">Restaurante · San Salvador</span></div>
+    </div>
+    <div class="testimonio-card reveal" style="transition-delay:.1s">
+      <div class="testimonio-stars">★★★★★</div>
+      <p class="testimonio-text">"Antes vivía con miedo a Hacienda. Ahora sé exactamente cuándo y cuánto pagar. Los reportes visuales son increíbles, los entiendo de inmediato."</p>
+      <div class="testimonio-autor"><span class="testimonio-nombre">Patricia R.</span><span class="testimonio-cargo">Boutique · Santa Ana</span></div>
+    </div>
+    <div class="testimonio-card reveal" style="transition-delay:.2s">
+      <div class="testimonio-stars">★★★★★</div>
+      <p class="testimonio-text">"La nómina la manejaba yo con Excel y cometía errores. Gabriel automatizó todo. Ahora está listo en minutos y con todos los descuentos correctos."</p>
+      <div class="testimonio-autor"><span class="testimonio-nombre">Roberto A.</span><span class="testimonio-cargo">Empresa de servicios · Sonsonate</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="section-label">Preguntas frecuentes</div>
+  <h2 class="section-title">Todo lo que necesitas saber</h2>
+  <p class="section-desc">Respuestas directas a las dudas más comunes antes de empezar.</p>
+  <div class="faq-grid">
+    <div class="faq-item reveal">
+      <div class="faq-q">¿Trabajas solo con empresas o también con personas naturales? <em class="faq-toggle">+</em></div>
+      <div class="faq-a">Trabajo con ambos. PYMEs, emprendimientos, profesionales independientes y personas naturales que necesiten declarar IVA o renta.</div>
+    </div>
+    <div class="faq-item reveal" style="transition-delay:.05s">
+      <div class="faq-q">¿Qué pasa si tengo atrasos o multas con Hacienda? <em class="faq-toggle">+</em></div>
+      <div class="faq-a">Sin problema. Una parte importante de mi trabajo es regularizar situaciones atrasadas. Empezamos con un diagnóstico para saber en qué posición estás y el plan de acción más conveniente.</div>
+    </div>
+    <div class="faq-item reveal" style="transition-delay:.1s">
+      <div class="faq-q">¿Cómo manejas la confidencialidad de mi información? <em class="faq-toggle">+</em></div>
+      <div class="faq-a">Toda tu información financiera es estrictamente confidencial, con las mismas obligaciones éticas y legales que rigen la profesión contable en El Salvador.</div>
+    </div>
+    <div class="faq-item reveal" style="transition-delay:.15s">
+      <div class="faq-q">¿Puedo cambiar de plan después de contratar? <em class="faq-toggle">+</em></div>
+      <div class="faq-a">Sí, sin penalidad. Los planes están diseñados para crecer con tu negocio. Si escala y necesitas más servicios, ajustamos el plan en cualquier momento.</div>
+    </div>
+    <div class="faq-item reveal" style="transition-delay:.2s">
+      <div class="faq-q">¿Trabajas con negocios fuera de San Salvador? <em class="faq-toggle">+</em></div>
+      <div class="faq-a">Sí, el servicio es 100% digital. Tengo clientes en todo El Salvador. Solo necesitas conexión a internet y comunicación por WhatsApp o videollamada.</div>
+    </div>
+    <div class="faq-item reveal" style="transition-delay:.25s">
+      <div class="faq-q">¿Cuánto tiempo dura el diagnóstico gratuito? <em class="faq-toggle">+</em></div>
+      <div class="faq-a">30 minutos por Zoom o Google Meet. Revisamos tu situación, identifico puntos de riesgo y te presento las opciones. Sin presión de contratación.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA + FORMULARIO -->
+<section class="cta-section" id="contacto" style="padding:0;">
+  <div class="cta-left reveal">
+    <div class="section-label">¿Listo para empezar?</div>
+    <h2 class="cta-title">Tu diagnóstico financiero es gratis.</h2>
+    <p class="cta-desc">30 minutos para entender dónde está tu negocio y qué necesitas para hacerlo crecer. Sin compromiso, sin costo.</p>
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <div style="display:flex;align-items:center;gap:12px;font-size:14px;color:var(--muted);"><span style="color:var(--accent-light);">→</span> Respuesta en menos de 24 horas</div>
+      <div style="display:flex;align-items:center;gap:12px;font-size:14px;color:var(--muted);"><span style="color:var(--accent-light);">→</span> Reunión 100% virtual (Zoom o Google Meet)</div>
+      <div style="display:flex;align-items:center;gap:12px;font-size:14px;color:var(--muted);"><span style="color:var(--accent-light);">→</span> Sin compromiso de contratación</div>
+    </div>
+  </div>
+  <div class="cta-right">
+    <form id="contact-form" action="https://formspree.io/f/mvzlkovp" method="POST" onsubmit="handleSubmit(event)">
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Nombre</label><input class="form-input" type="text" name="nombre" placeholder="Tu nombre" required></div>
+        <div class="form-group"><label class="form-label">WhatsApp</label><input class="form-input" type="tel" name="whatsapp" placeholder="+503 XXXX-XXXX"></div>
+      </div>
+      <div class="form-group"><label class="form-label">Correo electrónico</label><input class="form-input" type="email" name="email" placeholder="tu@correo.com" required id="field-email"></div>
+      <div class="form-group">
+        <label class="form-label">Tipo de negocio</label>
+        <select class="form-select" name="tipo_negocio">
+          <option value="">Selecciona una opción</option>
+          <option>Emprendimiento / Startup</option>
+          <option>PYME establecida</option>
+          <option>Profesional independiente</option>
+          <option>Empresa mediana o grande</option>
+          <option>Otro</option>
+        </select>
+      </div>
+      <div class="form-group"><label class="form-label">¿Cuál es tu mayor reto financiero hoy?</label><textarea class="form-textarea" name="reto" placeholder="Cuéntame brevemente..." id="field-reto"></textarea></div>
+      <button type="submit" class="form-submit" id="submit-btn">Solicitar diagnóstico gratis</button>
+      <div style="display:flex;align-items:center;gap:12px;margin-top:12px;">
+        <div style="flex:1;height:1px;background:var(--border);"></div>
+        <span style="font-size:11px;color:var(--muted);letter-spacing:0.06em;text-transform:uppercase;">o también</span>
+        <div style="flex:1;height:1px;background:var(--border);"></div>
+      </div>
+      <a id="whatsapp-btn" href="https://wa.me/50360439421?text=Hola%20Gabriel%2C%20me%20interesa%20el%20diagn%C3%B3stico%20gratuito." target="_blank" style="display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:12px;background:#25D366;color:#fff;border:none;border-radius:2px;padding:14px;font-size:14px;font-weight:500;font-family:var(--sans);letter-spacing:0.03em;text-decoration:none;transition:all .2s;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Escribir por WhatsApp
+      </a>
+      <p class="form-note">Tu información es confidencial. No spam, nunca.</p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>© 2026 Gabriel Guzmán · Contador Estratégico · El Salvador</div>
+  <div style="display:flex;gap:24px;">
+    <a href="mailto:adonay.gyanes@gmail.com">adonay.gyanes@gmail.com</a>
+    <a href="https://www.linkedin.com/in/gabriel-guzm%C3%A1n-54a0b2242/" target="_blank">LinkedIn</a>
+    <a href="https://wa.me/50360439421" target="_blank">WhatsApp</a>
+  </div>
+</footer>
+
+<script>
+// Reveal on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      e.target.querySelectorAll('[data-target]').forEach(animateCount);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Count-up animation
+function animateCount(el) {
+  if (el.dataset.animated) return;
+  el.dataset.animated = '1';
+  const target = parseInt(el.dataset.target);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1200;
+  const start = performance.now();
+  function step(now) {
+    const p = Math.min((now - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.round(target * ease) + suffix;
+    if (p < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+// Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+});
+function closeMobileMenu() {
+  hamburger.classList.remove('open');
+  mobileMenu.classList.remove('open');
+}
+
+// FAQ accordion
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+
+// WhatsApp dinámico
+function updateWhatsAppLink() {
+  const nombre = document.querySelector('input[name="nombre"]')?.value || '';
+  const reto = document.getElementById('field-reto')?.value || '';
+  let msg = 'Hola Gabriel, me interesa el diagnóstico gratuito.';
+  if (nombre) msg = `Hola Gabriel, soy ${nombre} y me interesa el diagnóstico gratuito.`;
+  if (reto) msg += ` Mi mayor reto: ${reto}`;
+  document.getElementById('whatsapp-btn').href = `https://wa.me/50360439421?text=${encodeURIComponent(msg)}`;
+}
+document.addEventListener('input', updateWhatsAppLink);
+
+// Form submit
+async function handleSubmit(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submit-btn');
+  const form = document.getElementById('contact-form');
+  btn.textContent = 'Enviando...';
+  btn.disabled = true;
+  try {
+    const data = new FormData(form);
+    data.append('_replyto', data.get('email'));
+    const res = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+    if (res.ok) {
+      btn.textContent = '✓ ¡Mensaje enviado! Te contactaré pronto.';
+      btn.style.background = '#2d7a5e';
+      form.reset();
+    } else throw new Error();
+  } catch {
+    btn.textContent = 'Error al enviar. Escríbeme por WhatsApp.';
+    btn.style.background = '#c0392b';
+    btn.disabled = false;
+  }
+}
+</script>
+</body>
+</html>
