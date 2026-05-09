@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gabrielguzman-cont.github.io/sitemap.xml
